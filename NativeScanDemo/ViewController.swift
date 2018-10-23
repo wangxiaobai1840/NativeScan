@@ -86,7 +86,8 @@ class ViewController: UIViewController {
                 do{
                     try self.scanInput?.device.lockForConfiguration()
                 }catch{}
-                self.scanInput?.device.focusMode = .autoFocus // 自动聚焦
+//                self.scanInput?.device.focusMode = .autoFocus // 自动聚焦
+                self.scanInput?.device.focusMode = .continuousAutoFocus // 自动持续聚焦
                 self.scanInput?.device.unlockForConfiguration()
             }
            
