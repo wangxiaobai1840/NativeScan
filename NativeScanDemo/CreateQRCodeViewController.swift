@@ -35,6 +35,8 @@ class CreateQRCodeViewController: UIViewController {
             colorFilter?.setValue(CIColor.init(red: 0, green: 0, blue: 0), forKey: "inputColor0")
             colorFilter?.setValue(CIColor.init(red: 1, green: 1, blue: 1), forKey: "inputColor1")
             let codeImage:UIImage = UIImage(ciImage: colorFilter!.outputImage!.transformed(by: CGAffineTransform(scaleX: 5, y: 5)))
+            
+            // 添加中间的小图标
             let iconImage = UIImage.init(named: "test")
             let rect = CGRect(x: 0, y: 0, width: codeImage.size.width, height: codeImage.size.height)
             UIGraphicsBeginImageContext(rect.size)
